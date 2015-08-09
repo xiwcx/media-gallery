@@ -9,4 +9,4 @@ rules:
     - "single"
   strict:
     - 2
-    - "always"
+    - "global"

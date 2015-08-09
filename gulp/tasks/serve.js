@@ -8,10 +8,10 @@ var sass        = require('gulp-sass');
 gulp.task('serve', ['styles'], function() {
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir: './'
     }
   });
 
-  gulp.watch("app/scss/*.scss", ['styles']);
-  gulp.watch("./*.html").on('change', browserSync.reload);
+  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('./*.html').on('change', browserSync.reload);
 });
