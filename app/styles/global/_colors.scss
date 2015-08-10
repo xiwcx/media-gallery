@@ -1,0 +1,17 @@
+// Set readable variable names
+
+$blood-orange: hsl(359, 92%, 52%);
+$dark-grey:    hsl(0, 0%, 10%);
+$light-grey:   hsl(0, 0%, 95%);
+$white:        #fff;
+
+// Set semantic variables
+
+// $map: (key1: value1, key2: value2, key3: value3);
+
+$colors: (
+  highlight: $blood-orange,
+  inverse:   $white,
+  lowlight:  $light-grey,
+  text:      $dark-grey
+);

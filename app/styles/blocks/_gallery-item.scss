@@ -1,0 +1,7 @@
+.galleryitem-image {
+  border: solid ($base-unit / 2) map-get($colors, inverse);
+}
+
+.galleryitem-caption {
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+// Background colors
+
+@each $name, $color in $colors {
+  .background--#{$name} {
+    background-color: $color;
+  }
+
+  .text--#{$name} {
+    background-color: $color;
+  }
+}
