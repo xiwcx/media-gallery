@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="App">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,72 +8,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./static/styles.css">
     </head>
-    <body class="background--lowlight">
+    <body class="background--lowlight" ng-controller="Gallery">
         <main>
           <header class="column-gutter-half row-gutter-1">
             <h1 class="text--highlight h1">Portfolio</h1>
           </header>
 
           <div class="grid-container">
-            <figure class="grid-item column-gutter-half row-gutter-1">
-              <img class="galleryitem-image" src="http://www.fillmurray.com/g/1000/1000" alt="">
+            <figure class="grid-item column-gutter-half row-gutter-1" ng-repeat="galleryItem in galleryItems">
+              <img class="galleryitem-image" src="{{galleryItem.img}}" alt="">
               <figcaption class="galleryitem-caption">
-                <h2 class="h2">Bill Murray</h2>
-                <p class="h3">2015-08-09</p>
-              </figcaption>
-            </figure>
-            <figure class="grid-item column-gutter-half row-gutter-1">
-              <img class="galleryitem-image" src="http://www.placecage.com/1000/1000" alt="">
-              <figcaption class="galleryitem-caption">
-                <h2 class="h2">Nic Cage</h2>
-                <p class="h3">2015-08-08</p>
-              </figcaption>
-            </figure>
-            <figure class="grid-item column-gutter-half row-gutter-1">
-              <img class="galleryitem-image" src="http://www.stevensegallery.com/1000/1000" alt="">
-              <figcaption class="galleryitem-caption">
-                <h2 class="h2">Steven Segal</h2>
-                <p class="h3">2015-08-07</p>
-              </figcaption>
-            </figure>
-            <figure class="grid-item column-gutter-half row-gutter-1">
-              <img class="galleryitem-image" src="http://www.nicenicejpg.com/1000/1000" alt="">
-              <figcaption class="galleryitem-caption">
-                <h2 class="h2">Robert Van Winkle</h2>
-                <p class="h3">2015-08-06</p>
-              </figcaption>
-            </figure>
-            <figure class="grid-item column-gutter-half row-gutter-1">
-              <img class="galleryitem-image" src="http://www.placebear.com/1000/1000" alt="">
-              <figcaption class="galleryitem-caption">
-                <h2 class="h2">A Bear</h2>
-                <p class="h3">2015-08-05</p>
-              </figcaption>
-            </figure>
-            <figure class="grid-item column-gutter-half row-gutter-1">
-              <img class="galleryitem-image" src="http://placekitten.com/1000/1000" alt="">
-              <figcaption class="galleryitem-caption">
-                <h2 class="h2">A Kitten</h2>
-                <p class="h3">2015-08-04</p>
-              </figcaption>
-            </figure>
-            <figure class="grid-item column-gutter-half row-gutter-1">
-              <img class="galleryitem-image" src="http://www.fillmurray.com/g/1000/1000" alt="">
-              <figcaption class="galleryitem-caption">
-                <h2 class="h2">Bill Murray</h2>
-                <p class="h3">2015-08-09</p>
-              </figcaption>
-            </figure>
-            <figure class="grid-item column-gutter-half row-gutter-1">
-              <img class="galleryitem-image" src="http://www.placecage.com/1000/1000" alt="">
-              <figcaption class="galleryitem-caption">
-                <h2 class="h2">Nic Cage</h2>
-                <p class="h3">2015-08-08</p>
+                <h2 class="h2">{{galleryItem.title}}</h2>
+                <p class="h3">{{galleryItem.date}}</p>
               </figcaption>
             </figure>
           </div>
         </main>
-        <script src="./node_modules/angular/angular.js"></script>
         <script src="./static/scripts.js"></script>
     </body>
 </html>
