@@ -1,0 +1,20 @@
+%type-margin-reset {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.h1 {
+  @extend %type-margin-reset;
+}
+
+.h2 {
+  @extend %type-margin-reset;
+
+  color: map-get($colors, text);
+}
+
+.h3 {
+  @extend %type-margin-reset;
+
+  color: map-get($colors, text);
+}
