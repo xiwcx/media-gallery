@@ -1,49 +1,11 @@
 'use strict';
 
-var gulp    = require('angular');
-var gallery = angular.module('gallery', []);
+var angular = require('angular');
+var app     = angular.module('App', []);
 
-gallery.controller('Gallery', function ($scope) {
-  $scope.galleryItems = [
-    {
-      date: "2015-08-09",
-      img: "http://www.fillmurray.com/g/1000/1000",
-      title: "Bill Murray"
-    },
-    {
-      date: "2015-08-08",
-      img: "http://www.placecage.com/1000/1000",
-      title: "Nic Cage"
-    },
-    {
-      date: "2015-08-07",
-      img: "http://www.stevensegallery.com/1000/1000",
-      title: "Steven Segal"
-    },
-    {
-      date: "2015-08-06",
-      img: "http://www.nicenicejpg.com/1000/1000",
-      title: "Robert Van Winkle"
-    },
-    {
-      date: "2015-08-05",
-      img: "http://www.placebear.com/1000/1000",
-      title: "A Bear"
-    },
-    {
-      date: "2015-08-04",
-      img: "http://placekitten.com/1000/1000",
-      title: "A Kitten"
-    },
-    {
-      date: "2015-08-09",
-      img: "http://www.fillmurray.com/g/1000/1000",
-      title: "Bill Murray"
-    },
-    {
-      date: "2015-08-08",
-      img: "http://www.placecage.com/1000/1000",
-      title: "Nic Cage"
-    }
-  ];
+app.controller('Gallery', function ($scope, $http) {
+  $http.get('./stub.json').
+    success(function(data, status, headers, config){
+      $scope.galleryItems = data;
+    });
 });
