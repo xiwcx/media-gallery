@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('hello, world');
+var gulp = require('angular');
 
 var gallery = angular.module('gallery', []);
 
