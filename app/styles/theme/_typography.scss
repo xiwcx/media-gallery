@@ -5,16 +5,20 @@
 
 .h1 {
   @extend %type-margin-reset;
+
+  font-size: 2.5em;
 }
 
 .h2 {
   @extend %type-margin-reset;
 
   color: map-get($colors, text);
+  font-size: 1.35em;
 }
 
 .h3 {
   @extend %type-margin-reset;
 
-  color: map-get($colors, text);
+  color: lighten(map-get($colors, text), 15); ;
+  font-size: 1em;
 }

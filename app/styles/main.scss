@@ -1,5 +1,4 @@
 @import '../../node_modules/node-normalize-scss/normalize';
-@import 'base';
 
 // Global Imports
 
@@ -7,6 +6,8 @@
 @import 'global/colors';
 @import 'global/typography';
 
+// Base Styles
+@import 'base';
 
 // Layout Imports
 

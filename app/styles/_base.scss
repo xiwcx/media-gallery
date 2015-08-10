@@ -9,6 +9,32 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  padding-top: $base-unit / 2;
+
+  @media #{$bp-2-column-grid} {
+    font-size: 110%;
+    padding-left: $base-unit / 2;
+    padding-right: $base-unit / 2;
+    padding-top: $base-unit;
+  }
+
+  @media #{$bp-3-column-grid} {
+    font-size: 120%;
+    padding-left: $base-unit;
+    padding-right: $base-unit;
+    padding-top: $base-unit * 1.5;
+  }
+
+  @media #{$bp-4-column-grid} {
+    font-size: 130%;
+    padding-left: $base-unit * 1.5;
+    padding-right: $base-unit * 1.5;
+    padding-top: $base-unit * 2;
+  }
+}
+
 // Responsive image reset
 
 img {
